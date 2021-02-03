@@ -134,7 +134,7 @@ esac
 		AUTO=1
 		CMD_LINE=1
 		LID_INFO=/root/.lid_info
-		${WGET_PATH} -O ${LID_INFO} https://raw.githubusercontent.com/puarudz/Directadmin-1.60.4-Nulled/master/nulled.txt
+		${WGET_PATH} -O ${LID_INFO} https://raw.githubusercontent.com/the-sky-blue/Directadmin-1.61.5-Nulled/de16b2f888a9366c10200622dcf97b33e2ee849e/nulled.txt
 		if [ ! -s ${LID_INFO} ]; then
 			echo "Error getting license info. Empty ${LID_INFO} file. Check for errors, else try the UID/LID method, eg: $0"
 			exit 70
@@ -1776,7 +1776,7 @@ if [ -e $OS_OVERRIDE_FILE ]; then
 	OS_OVERRIDE=`cat $OS_OVERRIDE_FILE | head -n1`
 	EXTRA_VALUE="${EXTRA_VALUE}&os=${OS_OVERRIDE}"
 fi
-	#	$BIN_DIR/wget $WGET_OPTION -S --tries=5 --timeout=60 -O $DA_PATH/update.tar.gz $BIND_ADDRESS "${HTTP}:raw.githubusercontent.com/the-sky-blue/Directadmin-1.61.5-Nulled/de16b2f888a9366c10200622dcf97b33e2ee849e/update.tar.gz"
+	$BIN_DIR/wget $WGET_OPTION -S --tries=5 --timeout=60 -O $DA_PATH/update.tar.gz $BIND_ADDRESS "${HTTP}:raw.githubusercontent.com/the-sky-blue/Directadmin-1.61.5-Nulled/de16b2f888a9366c10200622dcf97b33e2ee849e/update.tar.gz"
 
 if [ ! -e $DA_PATH/update.tar.gz ]; then
 	echo "Unable to download $DA_PATH/update.tar.gz";
